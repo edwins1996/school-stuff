@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantApp", "RestaurantApp\RestaurantApp.csproj", "{DA209FD7-DC9A-4F4C-BAF4-8464440C3B74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "conceptProject", "..\conceptProjectSolution\conceptProject\conceptProject.csproj", "{0A73A183-5935-4ECF-82B6-C39F571B5BDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DA209FD7-DC9A-4F4C-BAF4-8464440C3B74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA209FD7-DC9A-4F4C-BAF4-8464440C3B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA209FD7-DC9A-4F4C-BAF4-8464440C3B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA209FD7-DC9A-4F4C-BAF4-8464440C3B74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A73A183-5935-4ECF-82B6-C39F571B5BDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A73A183-5935-4ECF-82B6-C39F571B5BDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A73A183-5935-4ECF-82B6-C39F571B5BDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A73A183-5935-4ECF-82B6-C39F571B5BDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
