@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RestaurantApp.Properties
+namespace conceptProject.Properties
 {
 
 

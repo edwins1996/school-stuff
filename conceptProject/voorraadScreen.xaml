@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="conceptProject.voorraadScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:conceptProject"
+             mc:Ignorable="d" 
+             d:DesignHeight="869" d:DesignWidth="1592">
+    <Grid Name="TheGrid">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFABC0E4" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="26,26,0,0" TextWrapping="Wrap" Text="Voorraad management" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" FontFamily="Monotype Corsiva"/>
+
+        <GroupBox Header="Voorraad wijzigen" Name="MenuScroll" HorizontalAlignment="Left" Height="698" Margin="26,85,0,0" VerticalAlignment="Top" Width="538" FontFamily="Monotype Corsiva" FontSize="18.667">
+            <Grid Name="TheVoorraadGrid">
+                <ScrollViewer Margin="0,0,0,60" FontFamily="Segoe UI">
+                    <Grid Name="VoorraadGrid">
+
+                    </Grid>
+                </ScrollViewer>
+                <Button Name="saveBtn1" Content="Opslaan" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89" Height="30" FontFamily="Segoe UI" Margin="401,630,0,0" Click="voorraadSave" ></Button>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="addGpbox" Header="Product toevoegen" HorizontalAlignment="Left" Margin="610,85,0,0" VerticalAlignment="Top" Height="348" Width="919" FontFamily="Monotype Corsiva" FontSize="18.667">
+            <Grid Name="prodAddGrid" HorizontalAlignment="Left" Height="348" Margin="0,0,-12,-28" VerticalAlignment="Top" Width="919">
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="30,30,0,0" TextWrapping="Wrap" Text="Productnaam:" VerticalAlignment="Top" FontFamily="Segoe UI"/>
+                <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="30,115,0,0" TextWrapping="Wrap" Text="Product voorraad:" VerticalAlignment="Top" FontFamily="Segoe UI"/>
+                <TextBox x:Name="prodNaambox" HorizontalAlignment="Left" Height="30" Margin="30,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" FontFamily="Segoe UI"/>
+                <TextBox x:Name="prodAantbox" HorizontalAlignment="Left" Height="30" Margin="30,156,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" FontFamily="Segoe UI"/>
+                <TextBox x:Name="prodartNrBox" HorizontalAlignment="Left" Height="30" Margin="30,236,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" FontFamily="Segoe UI"/>
+                <TextBox x:Name="minVoorraadBox" HorizontalAlignment="Left" Height="30" Margin="324,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" FontFamily="Segoe UI"/>
+                <TextBox x:Name="eenheidBox" HorizontalAlignment="Left" Height="30" Margin="324,156,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" FontFamily="Segoe UI"/>
+                <Button x:Name="saveBtn" Content="Opslaan" HorizontalAlignment="Left" Margin="796,277,0,0" VerticalAlignment="Top" Width="89" Height="30" FontFamily="Segoe UI" Click="saveBtn_Click"/>
+                <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="324,30,0,0" TextWrapping="Wrap" Text="Minimum aantal:" VerticalAlignment="Top" FontFamily="Segoe UI"/>
+                <TextBlock x:Name="textBlock2_Copy" HorizontalAlignment="Left" Margin="324,115,0,0" TextWrapping="Wrap" Text="Eenheid:" VerticalAlignment="Top" FontFamily="Segoe UI"/>
+                <TextBlock x:Name="textBlock2_Copy1" HorizontalAlignment="Left" Margin="30,198,0,0" TextWrapping="Wrap" Text="Artikelnummer:" VerticalAlignment="Top" FontFamily="Segoe UI"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="delGpbox" Header="Product wijzigen / verwijderen" HorizontalAlignment="Left" Margin="610,438,0,0" VerticalAlignment="Top" Height="345" Width="919" FontFamily="Monotype Corsiva" FontSize="18.667">
+            <Grid Name="prodDelGrid">
+
+                <ListBox x:Name="delList" Margin="30,57,608,10" FontFamily="Segoe UI" SelectionChanged="fillDelbox"/>
+
+
+                <TextBox x:Name="searchField" HorizontalAlignment="Left" Height="27" Margin="30,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="269" FontFamily="Segoe UI" KeyUp="searchProd"/>
+                <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="30,0,0,0" TextWrapping="Wrap" Text="Product zoeken:" VerticalAlignment="Top" Height="27" Width="259" FontFamily="Segoe UI"/>
+                <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="374,29,0,0" TextWrapping="Wrap" Text="Productnaam:" VerticalAlignment="Top" FontFamily="Segoe UI"/>
+                <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Margin="374,114,0,0" TextWrapping="Wrap" Text="Product voorraad:" VerticalAlignment="Top" FontFamily="Segoe UI"/>
+                <TextBox x:Name="prodNaambox1" HorizontalAlignment="Left" Height="30" Margin="374,71,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" FontFamily="Segoe UI"/>
+                <TextBox x:Name="prodAantbox1" HorizontalAlignment="Left" Height="30" Margin="374,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" FontFamily="Segoe UI"/>
+                <TextBox x:Name="prodnrbox1" HorizontalAlignment="Left" Height="30" Margin="374,232,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" FontFamily="Segoe UI"/>
+                <TextBox x:Name="minvoorBox" HorizontalAlignment="Left" Height="30" Margin="635,71,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" FontFamily="Segoe UI"/>
+                <TextBox x:Name="eenBox" HorizontalAlignment="Left" Height="30" Margin="635,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" FontFamily="Segoe UI"/>
+                <Button x:Name="delBtn" Content="Verwijderen" HorizontalAlignment="Left" Margin="766,277,0,0" VerticalAlignment="Top" Width="119" Height="30" FontFamily="Segoe UI" Click="delBtn_Click"/>
+                <Button x:Name="changeBtn" Content="Wijzigen" HorizontalAlignment="Left" Margin="614,277,0,0" VerticalAlignment="Top" Width="119" Height="30" FontFamily="Segoe UI" Click="changeBtn_Click"/>
+                <TextBlock x:Name="textBlock4_Copy" HorizontalAlignment="Left" Margin="635,29,0,0" TextWrapping="Wrap" Text="Mininum aantal:" VerticalAlignment="Top" FontFamily="Segoe UI"/>
+                <TextBlock x:Name="textBlock5_Copy" HorizontalAlignment="Left" Margin="635,114,0,0" TextWrapping="Wrap" Text="Eenheid:" VerticalAlignment="Top" FontFamily="Segoe UI"/>
+                <TextBlock x:Name="textBlock5_Copy1" HorizontalAlignment="Left" Margin="374,196,0,0" TextWrapping="Wrap" Text="Artikelnummer:" VerticalAlignment="Top" FontFamily="Segoe UI"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="backBtn" Content="Terug" HorizontalAlignment="Left" Margin="1454,806,0,0" VerticalAlignment="Top" Width="75" Height="30" Click="backBtn_Click" FontSize="18.667"/>
+    </Grid>
+</UserControl>

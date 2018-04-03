@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="conceptProject.Reserveren"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:conceptProject"
+             mc:Ignorable="d" 
+             d:DesignHeight="869" d:DesignWidth="1592">
+    <Grid Name="TheGrid">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFABC0E4" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="26,26,0,0" TextWrapping="Wrap" Text="Reservering maken" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" FontFamily="Monotype Corsiva"/>
+        <TextBox x:Name="searchBox" HorizontalAlignment="Left" Height="30" Margin="26,137,0,0" Text="" VerticalAlignment="Top" Width="234" FontSize="16" TextWrapping="Wrap" KeyUp="dataSearch"/>
+        <ListBox x:Name="klantenBox" HorizontalAlignment="Left" Height="628" Margin="26,201,0,0" VerticalAlignment="Top" Width="234" SelectionChanged="klantInfoChange"/>
+        <Button x:Name="submitButton" Content="Reservering opslaan" HorizontalAlignment="Left" Margin="1430,137,0,0" VerticalAlignment="Top" Width="125" Height="30" Click="submitButton_Click"/>
+        <!-- Klantgegevens -->
+        <TextBox x:Name="voornaamBox" HorizontalAlignment="Left" Height="30" Margin="380,201,0,0" Text="" VerticalAlignment="Top" Width="234" FontSize="16" TextWrapping="Wrap"/>
+        <TextBox x:Name="tussenvoegselBox" HorizontalAlignment="Left" Height="30" Margin="380,268,0,0" Text="" VerticalAlignment="Top" Width="234" FontSize="16" TextWrapping="Wrap"/>
+        <TextBox x:Name="achternaamBox" HorizontalAlignment="Left" Height="30" Margin="380,339,0,0" Text="" VerticalAlignment="Top" Width="234" FontSize="16" TextWrapping="Wrap"/>
+        <TextBox x:Name="adresBox" HorizontalAlignment="Left" Height="30" Margin="380,409,0,0" Text="" VerticalAlignment="Top" Width="234" FontSize="16" TextWrapping="Wrap"/>
+        <TextBox x:Name="huisnrBox" HorizontalAlignment="Left" Height="30" Margin="380,479,0,0" Text="" VerticalAlignment="Top" Width="234" FontSize="16" TextWrapping="Wrap"/>
+        <TextBox x:Name="postcodeBox" HorizontalAlignment="Left" Height="30" Margin="380,549,0,0" Text="" VerticalAlignment="Top" Width="234" FontSize="16" TextWrapping="Wrap"/>
+        <TextBox x:Name="emailBox" HorizontalAlignment="Left" Height="30" Margin="380,689,0,0" Text="" VerticalAlignment="Top" Width="234" FontSize="16" TextWrapping="Wrap"/>
+        <TextBox x:Name="telBox" HorizontalAlignment="Left" Height="30" Margin="380,759,0,0" Text="" VerticalAlignment="Top" Width="234" FontSize="16" TextWrapping="Wrap"/>
+        <TextBox x:Name="persBox" HorizontalAlignment="Left" Height="30" Margin="705,201,0,0" Text="" VerticalAlignment="Top" Width="234" FontSize="16" TextWrapping="Wrap"/>
+        <TextBox x:Name="timeBox" HorizontalAlignment="Left" Height="90" Margin="705,268,0,0" Text="" VerticalAlignment="Top" Width="234" FontSize="16" TextWrapping="Wrap" x:FieldModifier="public" />
+        <TextBox x:Name="dateBox" HorizontalAlignment="Left" Height="30" Margin="705,409,0,0" Text="" VerticalAlignment="Top" Width="234" FontSize="16" TextWrapping="Wrap" x:FieldModifier="public" />
+        <TextBox x:Name="tableBox" HorizontalAlignment="Left" Height="30" Margin="705,479,0,0" Text="" VerticalAlignment="Top" Width="234" FontSize="16" TextWrapping="Wrap" x:FieldModifier="public" />
+
+        <!-- TextBlokken -->
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="26,116,0,0" TextWrapping="Wrap" Text="Klant zoeken:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="26,180,0,0" TextWrapping="Wrap" Text="Resultaten:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="380,180,0,0" TextWrapping="Wrap" Text="Voornaam:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="380,318,0,0" TextWrapping="Wrap" Text="Achternaam:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Margin="380,252,0,0" TextWrapping="Wrap" Text="Tussenvoegsel:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Margin="380,388,0,0" TextWrapping="Wrap" Text="Adres:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Margin="380,458,0,0" TextWrapping="Wrap" Text="Huisnummer:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock8" HorizontalAlignment="Left" Margin="380,528,0,0" TextWrapping="Wrap" Text="Postcode:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock9" HorizontalAlignment="Left" Margin="380,598,0,0" TextWrapping="Wrap" Text="Woonplaats:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock10" HorizontalAlignment="Left" Margin="380,668,0,0" TextWrapping="Wrap" Text="Emailadres:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock11" HorizontalAlignment="Left" Margin="380,738,0,0" TextWrapping="Wrap" Text="Telefoon:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock12" HorizontalAlignment="Left" Margin="705,180,0,0" TextWrapping="Wrap" Text="Aantal personen:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock13" HorizontalAlignment="Left" Margin="705,252,0,0" TextWrapping="Wrap" Text="Tijd:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock14" HorizontalAlignment="Left" Margin="705,388,0,0" TextWrapping="Wrap" Text="Datum:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock15" HorizontalAlignment="Left" Margin="705,458,0,0" TextWrapping="Wrap" Text="Tafels:" VerticalAlignment="Top"/>
+
+
+        <Button x:Name="saveButton" Content="Nieuwe klant opslaan" HorizontalAlignment="Left" Margin="380,804,0,0" VerticalAlignment="Top" Width="234" Height="25" Click="saveButton_Click"/>
+        <Button x:Name="backBtn" Content="Terug" HorizontalAlignment="Left" Margin="1465,804,0,0" VerticalAlignment="Top" Width="90" Height="25" Click="backBtn_Click"/>
+        <!-- MENUVIEWER -->
+        <ScrollViewer Name="MenuScroll" HorizontalAlignment="Left" Height="588" Margin="1050,201,0,0" VerticalAlignment="Top" Width="505">
+            <Grid Name="MenuGrid">
+
+            </Grid>
+        </ScrollViewer>
+        <TextBlock x:Name="menuScrollBox" HorizontalAlignment="Left" Margin="1050,180,0,0" TextWrapping="Wrap" Text="Menu's:" VerticalAlignment="Top"/>
+        <Button x:Name="platteGrondBtn" Content="Plattegrond bekijken" HorizontalAlignment="Left" Margin="705,549,0,0" VerticalAlignment="Top" Width="234" Height="55" FontSize="21.333" Click="platteGrondBtn_Click"/>
+        <TextBox x:Name="klantID" HorizontalAlignment="Left" Height="23" Margin="380,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="woonplaatsBox" HorizontalAlignment="Left" Margin="380,619,0,0" VerticalAlignment="Top" Width="234" FontSize="16" Height="30"/>
+    </Grid>
+</UserControl>

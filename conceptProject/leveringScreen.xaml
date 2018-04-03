@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="conceptProject.leveringScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:conceptProject"
+             mc:Ignorable="d" 
+             d:DesignHeight="869" d:DesignWidth="1592">
+    <Grid Name="TheGrid">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFABC0E4" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="26,26,0,0" TextWrapping="Wrap" Text="Leveringen" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" FontFamily="Monotype Corsiva"/>
+        <GroupBox x:Name="groupBox" Header="Importeren leveringsbestand" HorizontalAlignment="Left" Margin="26,85,0,0" VerticalAlignment="Top" Height="201" Width="657" FontFamily="Monotype Corsiva" FontSize="18.667">
+            <Grid>
+                <TextBlock x:Name="chosenFile" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontFamily="Segoe UI" Height="29" Width="617"/>
+                <Button x:Name="fileSearchBtn" Content="Zoeken" HorizontalAlignment="Left" Margin="10,44,0,0" FontFamily="Segoe UI" VerticalAlignment="Top" Width="75" Click="fileSearchBtn_Click"/>
+                <Button x:Name="showFile" Content="Uitlezen" HorizontalAlignment="Left" Margin="546,134,0,0" FontFamily="Segoe UI" VerticalAlignment="Top" Width="81" Click="showFile_Click"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBox1" Header="Inhoud bestand" HorizontalAlignment="Left" Margin="26,308,0,0" VerticalAlignment="Top" Height="479" Width="657" FontSize="18.667" FontFamily="Monotype Corsiva">
+            <Grid>
+                <ListBox x:Name="fileItems" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="645" Background="{x:Null}" FontFamily="Segoe UI"/>
+                <Button x:Name="fileSave" Content="Inboeken" HorizontalAlignment="Left" Margin="546,416,0,6" Width="89" FontFamily="Segoe UI" Click="fileSave_Click"/>
+
+            </Grid>
+        </GroupBox>
+        <Button x:Name="backBtn" Content="Terug" HorizontalAlignment="Left" Margin="1482,818,0,0" VerticalAlignment="Top" Width="75" FontSize="18.667" Click="backBtn_Click"/>
+        <GroupBox x:Name="groupBox2" Header="Bestellijst" HorizontalAlignment="Left" Margin="708,85,0,0" VerticalAlignment="Top" Height="700" Width="849" FontFamily="Monotype Corsiva" FontSize="18.667">
+            <Grid>
+                <Button x:Name="exportBtn" Content="Exporteren" HorizontalAlignment="Left" Margin="730,639,0,0" VerticalAlignment="Top" Width="98" FontFamily="Segoe UI"/>
+                <ScrollViewer HorizontalAlignment="Left" Height="622" VerticalAlignment="Top" Width="837" FontFamily="Segoe UI">
+                    <Grid Name="BestelGrid"/>
+                </ScrollViewer>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>
